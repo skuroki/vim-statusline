@@ -11,11 +11,11 @@ if !exists('g:hi_insert')
 endif
 
 " Linux等でESC後にすぐ反映されない場合、次行以降のコメントを解除してください
-" if has('unix') && !has('gui_running')
-"   " ESC後にすぐ反映されない場合
-"   inoremap <silent> <ESC> <ESC>
-"   inoremap <silent> <C-[> <ESC>
-" endif
+if has('unix') && !has('gui_running')
+  " ESC後にすぐ反映されない場合
+  inoremap <silent> <ESC> <ESC>
+  inoremap <silent> <C-[> <ESC>
+endif
 
 if has('syntax')
   augroup InsertHook
